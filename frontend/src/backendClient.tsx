@@ -21,7 +21,6 @@ backendClient.interceptors.response.use(
         }
         const message =
             error.response?.data?.detail || "Something went wrong with the API.";
-        const status = error.response?.status;
 
         // log("API error:", { status, message });
         
