@@ -2,6 +2,7 @@
 
 > Deploying a Qwen 2.5 Coder 7B model using llama and AWS to demonstrate how models are deployed in production environments.
 
+[Link](https://duke.box.com/s/pqyyrkcjwr0a34nu1of2m3m90wj3wkq5) to the demo of the application being deployed on AWS g5 12xlarge instance.
 
 ### How to run
 
