@@ -10,6 +10,11 @@ POSTGRESQL_PASSWORD=os.getenv('POSTGRESQL_PASSWORD')
 POSTGRESQL_URL=os.getenv('POSTGRESQL_URL')
 POSTGRESQL_DBNAME=os.getenv('POSTGRESQL_DBNAME')
 DATABASE_URL = f"postgresql://{POSTGRES_USERNAME}:{POSTGRESQL_PASSWORD}@{POSTGRESQL_URL}/{POSTGRESQL_DBNAME}"
+print("postgres username: ", POSTGRES_USERNAME)
+print("postgres password: ", POSTGRESQL_PASSWORD)
+print("postgres url: ", POSTGRESQL_URL)
+print("Db name: ", POSTGRESQL_DBNAME)
+
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

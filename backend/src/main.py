@@ -11,9 +11,14 @@ from schema import QuestionAnswerResponse
 from sqlalchemy.orm import Session
 
 from llama_cpp import Llama
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), "../models", "qwen2.5-coder-7b.gguf")
+model_path = os.path.abspath(model_path)
+
 
 llm = Llama(
-    model_path="./qwen2.5-coder-7b.gguf",
+    model_path=model_path,
     n_ctx=8192,
     n_gpu_layers=35,
     n_threads=8

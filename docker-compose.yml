@@ -4,7 +4,7 @@ services:
     build:
       context: ./frontend
       args:
-        API_URL: http://ec2-3-15-20-92.us-east-2.compute.amazonaws.com/
+        API_URL: http://ec2-3-15-20-92.us-east-2.compute.amazonaws.com
     ports:
       - "80:80"
 
@@ -13,4 +13,6 @@ services:
     build:
       context: ./backend
     volumes:
-      - ./qwen2.5-coder-7b.gguf:/app/qwen2.5-coder-7b.gguf
+      - ./backend/models:/app/models
+    env_file:
+      - ./backend/.env
